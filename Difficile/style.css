@@ -1,0 +1,114 @@
+/* PICCOLI ACCORGIMENTI DI IMPAGINAZIONE E STILE */
+body {
+   margin: 35px 10px;
+   text-align: center;
+   font: 16px sans-serif;
+   background-image: url("../Immagini/space.jpg");
+   background-repeat: repeat;
+   background-attachment: fixed;
+   }
+
+
+#logo{
+float:left;
+margin-top:0%; margin-left:10%;
+position:relative;
+}
+
+
+#word { /*casella parola da inserire*/
+   float:left;
+   margin-top:-43%; margin-left:12%;
+   margin-bottom: 30px;
+   border: 1px solid #ccc;
+   border-radius:10px;
+   width: 600px !important; height: 70px !important;
+   width: 30px; height: 30px;
+   background-color: #fff;
+   text-transform: uppercase;
+   font-size: 48px;
+   }
+
+#word span { text-decoration: underline }
+
+#keyboard { /*tastiera da spostare*/
+   float:left;
+   margin-top:-36%; margin-left:14%;
+   border: 2px solid #ccc;
+   padding: 2px;
+   width: 523px !important; height: 172px !important;
+   width: 564px; height: 180px;
+   }
+
+#keyboard a, #keyboard span {
+   float: left;
+   margin: 2px;
+   border: 2px solid black;
+   border-radius:10px;
+   width: 50px !important; height: 50px !important;
+   width: 54px; height: 54px;
+   background: #800000;
+   color: white;
+   text-decoration: none;
+   line-height: 48px;
+   font-weight: bold;
+   font-size: 30px;
+   font-family: verdana;
+   }
+
+#keyboard a:hover {
+   border-color: black;
+   background:  #ff0000;
+   color: white;
+   font-weight: bold;
+   font-size: 40px;
+   font-family: verdana;
+   transition-duration: 0.3s;
+   }
+
+#keyboard a:active {
+   border-color: #e600e6;
+   background:  #660066;
+   color: #ff1aff;
+   }
+
+
+   
+/* BOX DELL'IMPICCATO, SENZA IMMAGINE DI SFONDO */
+#impiccato {
+   float:left;
+   margin-top:0%; margin-left:60%;
+   /*margin-bottom: 30px;*/
+   width: 600px !important; height: 800px !important;
+   width: 302px; height: 302px;
+   }
+
+/* CLASSI APPLICABILI AL BOX PRECEDENTE, CON LE ../Immagini DELLA SEQUENZA */
+.x0 { background-image: url('../Immagini/Step0.png') }
+.x1 { background-image: url('../Immagini/Step1.png') }
+.x2 { background-image: url('../Immagini/Step2.png') }
+.x3 { background-image: url('../Immagini/Step3.png') }
+.x4 { background-image: url('../Immagini/Step4.png') }
+.x5 { background-image: url('../Immagini/Step5.png') }
+.x6 { background-image: url('../Immagini/Step6.png') }
+
+/* PULSANTE INATTIVO DEL BOX TASTIERA (GRIGIO) */
+#keyboard span {
+   border-color: #999;
+   background: #eee;
+   color: #999;
+   }
+
+/* PULSANTE INATTIVO CON LETTERA GIUSTA (VERDE) */
+#keyboard span.ok {
+   border-color: #6f6;
+   background: #efe;
+   color: #6f6;
+   }
+
+/* PULSANTE INATTIVO CON LETTERA ERRATA (ROSSO) */
+#keyboard span.ko {
+   border-color: #f99;
+   background: #fee;
+   color: #f99;
+   }

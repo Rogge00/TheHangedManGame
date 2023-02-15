@@ -1,0 +1,17 @@
+*script.js*
+Righe dalla 1 alla 7: vengono definite le variabili globali, alcune costanti, altre vuote;
+Func. INIT: chiama tutte le funzioni di inizializzazione;
+Func. INIT_IMAGE: crea l'handler per l'obj DOM del box dell'impiccato e lo setta allo step 0;
+Func. INIT_WORD: crea l'handler per l'obj DOM del box della parola misteriosa e lo popola con <span> contenenti le lettere della parola, sostituendone le interne con simbolo + per vocale e - per consonante;
+Func. INIT_KEYBOARD: crea l'handler per l'obj DOM del box tastiera e lo popola con le lettere dell'alfabeto (terminando anche con un punto "." per questioni di stile); ogni <a> ha un evento onclick che chiama la successiva funzione;
+Func. CHECK_KEY: chiamata all'evento onclick sul box tastiera, chiede conferma della lettera scelta, dunque chiama la funzione CHECK_CHAR; a result positivo incrementa la variabile che tiene conto dei caratteri giusti e visualizza un alert con messaggio positivo, altrimenti il messaggio sarà negativo e verrà chiamata la funzione IMPICCATO; in ogni caso, vengono chiamate le funzioni DISABLE_KEY e CHECK_ENDGAME;
+Func. CHECK_CHAR: verifica se la lettera specificata è contenuta nella parola misteriosa, dando come valore di ritorno il numero di occorrenze trovate e chiamando la funzione REVEAL_CHAR ad ogni occorrenza; viene anche aggiunta la lettera in questione ad una stringa, insieme a tutte le altre già scelte;
+Func. DISABLE_KEY: disabilita il pulsante della lettera scelta, assegnando al pulsante inattivo una classe CSS (lettera giusta, lettera errata);
+Func. REVEAL_CHAR: svela la lettera alla posizione indicata nel box della parola misteriosa;
+Func. IMPICCATO: assegna una nuova classe CSS al box dell'impiccato ed aumenta la variabile image, che controlla il numero di errori;
+Func. CHECK_ENDGAME: verifica se il gioco è terminato tramite due if, dei quali il primo confronta il numero di errori con il loro limite massimo, mentre il secondo confronta il numero di lettere giuste con il numero di lettere della parola misteriosa; se nessuna delle condizioni è verificata, la funzione rimane inerte, altrimenti viene visualizzato un alert con messaggio di vittoria o sconfitta ed eventuali altre istruzioni.
+
+*init.js*
+Func. RAND: estrae un numero intero casuale fra un massimo e un limite specificati
+Righe dalla 12 alla 23: viene definito l'array words, contenente varie parole (settabili lato server, volendo), dunque tramite funzione RAND si prende un indice a caso che sia chiave dell'array precedente e dopodichè se ne estrae il valore, settando la corrente parola misteriosa nella stringa word; infine viene chiamata la funzione di inizializzazione INIT, definita nel file script.js.
+ATTENZIONE: evitare accuratamente caratteri e simboli estranei al semplice alfabeto (escludere anche le lettere accentate)!
