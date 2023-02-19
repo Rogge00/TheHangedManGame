@@ -1,4 +1,4 @@
-var word = "";
+var word = "ufo";
 var vowels = "AEIOU", alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var chosen = "", image = 0, rightChars = 2;
 var imageBox, wordBox, keyboardBox;
@@ -8,6 +8,8 @@ var span_ok = span_start.replace ('>', ' class="ok">'), span_ko = span_start.rep
 var str = "Hello World!";
 var n = str.length;
 var cacca;
+
+
 
 function init () {
   word = word.toUpperCase ();
@@ -31,6 +33,7 @@ function init_word () {
     var reveal = (i == 0 || i == word.length -1) ? chr : (vowels.indexOf (chr) == -1) ? "&ndash;" : "+";
     wordBox.innerHTML += "<span>" + reveal + "</span>\n";
   }
+  alert(word)
 }
 
 	
