@@ -1,4 +1,4 @@
-var word = "ufo";
+var word = "";
 var vowels = "AEIOU", alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var chosen = "", image = 0, rightChars = 2;
 var imageBox, wordBox, keyboardBox;
@@ -108,3 +108,4 @@ function check_endgame () {
 }
 
 
+init()
